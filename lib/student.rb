@@ -25,7 +25,7 @@ class Student
     DB[:conn].execute(sql)
   end
   def save
-    if self.id 
+    if self.id
       self.update
     else
       sql = <<-SQL
@@ -50,7 +50,7 @@ class Student
   end
   def update
     sql <<-SQL
-      UPDATE students 
+      UPDATE students
       SET name = ?, grade = ?
       WHERE id = ?
     SQL
